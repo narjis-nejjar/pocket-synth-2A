@@ -5,7 +5,6 @@
 Le **Pocket Synth** est un synthétiseur audio embarqué réalisé sur microcontrôleur STM32.
 Il permet de générer des sons en temps réel, de modifier le son via des filtres numériques et de contrôler le tempo à l’aide d’un potentiomètre.
 
----
 
 ## Fonctionnalités
 
@@ -16,7 +15,7 @@ Il permet de générer des sons en temps réel, de modifier le son via des filtr
 * ▶️ Mode séquenceur (lecture automatique)
 * 💡 Indication visuelle avec LED
 
----
+
 ## Spécifications techniques
 Microcontrôleur : STM32F303RE
 Fréquence d’échantillonnage : 22.038 kHz
@@ -35,7 +34,6 @@ Le système repose sur une architecture temps réel basée sur interruptions :
 
 Le traitement audio est entièrement réalisé en interruption afin de garantir un fonctionnement temps réel sans jitter perceptible.
 
----
 
 ##  Traitement du signal
 
@@ -43,7 +41,7 @@ Le traitement audio est entièrement réalisé en interruption afin de garantir 
 * Application de filtres numériques IIR
 * Conversion du signal : DAC 12 bits
 
----
+
 
 ##  Partie matérielle
 
@@ -52,7 +50,7 @@ Le traitement audio est entièrement réalisé en interruption afin de garantir 
 * Haut-parleur (via DAC + filtre RC)
 * LED + bouton poussoir
 
----
+
 
 ##  Utilisation
 
@@ -62,7 +60,7 @@ Le traitement audio est entièrement réalisé en interruption afin de garantir 
 4. Ajuster le potentiomètre pour modifier le tempo
 5. Utiliser le bouton pour activer/désactiver le séquenceur
 
----
+
 ## Choix techniques
 Filtre IIR :
 faible coût de calcul (adapté temps réel)
@@ -80,7 +78,6 @@ réduction du jitter
 * Sauvegarde de séquences
 
 
----
 
 
 
