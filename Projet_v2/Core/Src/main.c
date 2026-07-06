@@ -216,19 +216,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 
 
- // AJOUTE ICI ↓
 
- // if (htim->Instance == TIM6)
-
- // {
-
- // F0 = melody[note_index];
-
- // note_index = (note_index + 1) % MELODY_LEN;
-
-
-
- // }
+ 
 
 
 
@@ -358,17 +347,7 @@ int main(void)
 
 	   }
 
-	   // Bouton START/STOP
 
-	   // if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET)
-
-	   // {
-
-	   // sequencer_running = !sequencer_running;
-
-	   // HAL_Delay(200); // anti-rebond
-
-	   //}
 
 
 
@@ -392,7 +371,7 @@ int main(void)
 
 
 
-	   // Potentiomètre tempo ← VERSION FINALE AVEC BUG POUR LES TEMPO PLUS LENT
+	   // Potentiomètre tempo 
 
 	   HAL_ADC_Start(&hadc2);
 
@@ -404,25 +383,7 @@ int main(void)
 
 	    __HAL_TIM_SET_AUTORELOAD(&htim6, period);
 
-	   // Potentiomètre tempo ← VERSION FINALE POUR DEBUG POUR LES TEMPO PLUS LENT
-
-	   //HAL_ADC_Start(&hadc2);
-
-	   //HAL_ADC_PollForConversion(&hadc2, 10);
-
-	   //uint32_t adc_val = HAL_ADC_GetValue(&hadc2);
-
-	   //uint32_t period = 500 + (adc_val * 7500 / 4095);
-
-	   //if (period != __HAL_TIM_GET_AUTORELOAD(&htim6))
-
-	   //{
-
-	   //__HAL_TIM_SET_COUNTER(&htim6, 0);
-
-	  // __HAL_TIM_SET_AUTORELOAD(&htim6, period);
-
-	   //}
+	  
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
